@@ -1,7 +1,5 @@
 //1st method : promise
 
-import { Promise } from "mongoose"
-
 const asyncHandler = (requestHandler) => {
 
     return (req, res, next) => {
