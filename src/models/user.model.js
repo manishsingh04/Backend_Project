@@ -58,7 +58,7 @@ const userSchema = new Schema(
 userSchema.pre('save', async function (next) {
 
     if (!this.isModified("password")) return next(); //check password change hua hai ke nhi agar hua hai toh he password hash karenge.
-    this.password = bcrypt.hash(this.password, 10); //second para. is salt number
+    this.password = await bcrypt.hash(this.password, 10); //second para. is salt number
     next();
 
 
