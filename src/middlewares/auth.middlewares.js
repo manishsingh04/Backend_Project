@@ -10,7 +10,7 @@ import { User } from "../models/user.model.js";
 export const veriyJWT = asyncHandler(async (req, _, next) => {
 
     try {
-        //1st.Token ya toh cookie se lelo
+        //1st.cookie ye  cookie parser middleware se lelo
         //ya toh custom header se lelo, jo postman maine hota hai
         const token = req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer ", "")
 
